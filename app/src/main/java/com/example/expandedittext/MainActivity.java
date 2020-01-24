@@ -14,7 +14,14 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         mAutoResizeEditText = (AutoResizeEditText) findViewById(R.id.rET);
-
+        mAutoResizeEditText.setEnabled(true);
+        mAutoResizeEditText.setFocusableInTouchMode(true);
+        mAutoResizeEditText.setFocusable(true);
+        mAutoResizeEditText.setEnableSizeCache(false);
+        mAutoResizeEditText.setMovementMethod(null);
+        // can be added after layout inflation; it doesn't have to be fixed
+        // value
+        mAutoResizeEditText.setMaxHeight(330);
 
 
     }

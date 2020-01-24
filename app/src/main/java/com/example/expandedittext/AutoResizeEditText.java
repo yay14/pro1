@@ -63,7 +63,7 @@ public class AutoResizeEditText extends AppCompatEditText{
         super(context, attrs, defStyle);
         // using the minimal recommended font size
         _minTextSize = TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_SP,
-                12, getResources().getDisplayMetrics());
+                15, getResources().getDisplayMetrics());
         _maxTextSize = getTextSize();
         if (_maxLines == 0)
             // no value was assigned during construction
@@ -169,6 +169,7 @@ public class AutoResizeEditText extends AppCompatEditText{
             r = Resources.getSystem();
         else
             r = c.getResources();
+
         _maxTextSize = TypedValue.applyDimension(unit, size,
                 r.getDisplayMetrics());
         _textCachedSizes.clear();
